@@ -1,0 +1,41 @@
+ion-content {
+  --background: rgb(20,28,51);
+}
+
+.boton{
+  --background: #00539a;
+  margin-top: 24px;
+  width: 73%;
+  margin-left: auto;
+  margin-right: auto;
+  --border-radius: 20px;
+}
+
+h1 {
+  margin-top: 9%;
+  text-align: center;
+  font-size: 2.3rem;  
+  font-family: "Sans-Serif";
+  font-weight: 600;
+  color: #fff;
+}
+
+.logo{
+  display: block;
+  margin-top: 10%;
+  width: 225px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
+}
+
+ion-footer {
+  ion-toolbar {
+    --background: rgba(0,0,0,0);
+    ion-title {
+      font-family: "Sans-Serif";
+      font-size: 13px;
+      color: #fff;
+    }
+  }
+}

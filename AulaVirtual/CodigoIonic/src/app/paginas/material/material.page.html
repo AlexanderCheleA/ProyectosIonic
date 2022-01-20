@@ -1,0 +1,329 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="colorbarra"> 
+    <ion-button  mode="md" class="botonretroceso">
+      <ion-back-button (click)="closeSticky()" defaultHref="/menutabs/materias"></ion-back-button>
+    </ion-button><!-- boton de retroceso al pricipal -->
+    <ion-title>Material</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true" (ionScroll)="didScroll($event)">
+  
+  <div class="Quimestre">
+    <ion-label>Primer quimestre</ion-label>
+  </div>
+  <div class="Parcial">
+    <ion-label>Primer Parcial</ion-label>
+  </div>
+  <div  *ngFor="let item of listaMaterial">
+    <div *ngIf="item.idQuimestre == 1 && item.idParcial ==1">
+
+      <ion-card mode="ios">
+        <div *ngIf="item.idTipoActividad == 1"><ion-card-title>Clase</ion-card-title></div>
+        <div *ngIf="item.idTipoActividad == 2"><ion-card-title>Tarea</ion-card-title></div>
+        <div *ngIf="item.idTipoActividad == 3"><ion-card-title>Taller</ion-card-title></div>
+        <div *ngIf="item.idTipoActividad == 4"><ion-card-title>Proyecto</ion-card-title></div>
+        <div *ngIf="item.idTipoActividad == 5"><ion-card-title>Leccion</ion-card-title></div>
+        <div *ngIf="item.idTipoActividad == 6"><ion-card-title>Examen</ion-card-title></div>
+
+        <ion-card-content>
+          <div class="descripcion">
+            <ion-label>{{item.tituloContenido}}</ion-label>
+          </div>
+          <br>
+          <div *ngIf="item.idTipoActividad != 1">
+            <ion-label>{{item.archivoContenidoDocente}}</ion-label>
+          </div>
+          <div class="contenedorvideo" *ngIf="item.idTipoActividad == 1">
+            <video #player playsinline preload="auto" src="http://192.168.43.209/{{item.archivoContenidoDocente}}">
+            </video>
+            <div class="bar">
+              <ion-button (click)="openFullscreen2(item)" color="light" fill="clear">
+                <ion-icon slot="icon-only" name="easel"></ion-icon>
+              </ion-button>
+              <!-- <ion-button size="small" (click)="audio()" color="light" fill="clear">
+                <ion-icon slot="icon-only" [name] ="contador ? 'volume-high-outline' : 'volume-mute-outline'"></ion-icon>
+              </ion-button> -->
+            </div>
+          </div>
+          <ion-button mode="ios" expand="block" class="botonD" color="warning" (click)="Descargar(item)">Descargar archivo</ion-button>
+          <div class="descripcion">
+            <ion-label>{{item.descripcionContenido}}</ion-label>
+          </div>
+          <!-- <div *ngIf="item.idTipoActividad != 1">
+            <ion-button mode="ios" size="default" class="botonD1" (click)="enviar(item)">Enviar archivo</ion-button>
+          </div> -->
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  
+    <div class="Parcial">
+      <ion-label>Segundo Parcial</ion-label>
+    </div>
+    
+    <div  *ngFor="let item of listaMaterial">
+      <div *ngIf="item.idQuimestre == 1 && item.idParcial == 2">
+      
+        <ion-card mode="ios">
+          <div *ngIf="item.idTipoActividad == 1"><ion-card-title>Clase</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 2"><ion-card-title>Tarea</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 3"><ion-card-title>Taller</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 4"><ion-card-title>Proyecto</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 5"><ion-card-title>Leccion</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 6"><ion-card-title>Examen</ion-card-title></div>
+  
+          <ion-card-content>
+            <div class="descripcion">
+              <ion-label>{{item.tituloContenido}}</ion-label>
+            </div>
+            <br>
+            <div *ngIf="item.idTipoActividad != 1">
+              <ion-label>{{item.archivoContenidoDocente}}</ion-label>
+            </div>
+            <div class="contenedorvideo" *ngIf="item.idTipoActividad == 1">
+              <video #player playsinline preload="auto" src="http://192.168.43.209/{{item.archivoContenidoDocente}}">
+              </video>
+              <div class="bar">
+                <ion-button (click)="openFullscreen2(item)" color="light" fill="clear">
+                  <ion-icon slot="icon-only" name="easel"></ion-icon>
+                </ion-button>
+                <!-- <ion-button size="small" (click)="audio()" color="light" fill="clear">
+                  <ion-icon slot="icon-only" [name] ="contador ? 'volume-high-outline' : 'volume-mute-outline'"></ion-icon>
+                </ion-button> -->
+              </div>
+            </div>
+            <ion-button mode="ios" expand="block" class="botonD" color="warning" (click)="Descargar(item)">Descargar archivo</ion-button>
+            <div class="descripcion">
+              <ion-label>{{item.descripcionContenido}}</ion-label>
+            </div>
+            <!-- <div *ngIf="item.idTipoActividad != 1">
+              <ion-button mode="ios" size="default" class="botonD1" (click)="enviar(item)">Enviar archivo</ion-button>
+            </div> -->
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+    
+    <div class="Parcial">
+      <ion-label>Tercer Parcial</ion-label>
+    </div>
+    <div  *ngFor="let item of listaMaterial">
+      <div *ngIf="item.idQuimestre == 1 && item.idParcial == 3">
+      
+        <ion-card mode="ios">
+          <div *ngIf="item.idTipoActividad == 1"><ion-card-title>Clase</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 2"><ion-card-title>Tarea</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 3"><ion-card-title>Taller</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 4"><ion-card-title>Proyecto</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 5"><ion-card-title>Leccion</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 6"><ion-card-title>Examen</ion-card-title></div>
+  
+          <ion-card-content>
+            <div class="descripcion">
+              <ion-label>{{item.tituloContenido}}</ion-label>
+            </div>
+            <br>
+            <div *ngIf="item.idTipoActividad != 1">
+              <ion-label>{{item.archivoContenidoDocente}}</ion-label>
+            </div>
+            <div class="contenedorvideo" *ngIf="item.idTipoActividad == 1">
+              <video #player playsinline preload="auto" src="http://192.168.43.209/{{item.archivoContenidoDocente}}">
+              </video>
+              <div class="bar">
+                <ion-button (click)="openFullscreen2(item)" color="light" fill="clear">
+                  <ion-icon slot="icon-only" name="easel"></ion-icon>
+                </ion-button>
+                <!-- <ion-button size="small" (click)="audio()" color="light" fill="clear">
+                  <ion-icon slot="icon-only" [name] ="contador ? 'volume-high-outline' : 'volume-mute-outline'"></ion-icon>
+                </ion-button> -->
+              </div>
+            </div>
+            <ion-button mode="ios" expand="block" class="botonD" color="warning" (click)="Descargar(item)">Descargar archivo</ion-button>
+            <div class="descripcion">
+              <ion-label>{{item.descripcionContenido}}</ion-label>
+            </div>
+            <!-- <div *ngIf="item.idTipoActividad != 1">
+              <ion-button mode="ios" size="default" class="botonD1" (click)="enviar(item)">Enviar archivo</ion-button>
+            </div> -->
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+    
+    <div class="Quimestre">
+      <ion-label>Segundo quimestre</ion-label>
+    </div>
+    <div class="Parcial">
+      <ion-label>Primer Parcial</ion-label>
+    </div>
+
+    <div  *ngFor="let item of listaMaterial">
+      <div *ngIf="item.idQuimestre == 2 && item.idParcial ==1">
+      
+        <ion-card mode="ios">
+          <div *ngIf="item.idTipoActividad == 1"><ion-card-title>Clase</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 2"><ion-card-title>Tarea</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 3"><ion-card-title>Taller</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 4"><ion-card-title>Proyecto</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 5"><ion-card-title>Leccion</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 6"><ion-card-title>Examen</ion-card-title></div>
+  
+          <ion-card-content>
+            <div class="descripcion">
+              <ion-label>{{item.tituloContenido}}</ion-label>
+            </div>
+            <br>
+            <div *ngIf="item.idTipoActividad != 1">
+              <ion-label>{{item.archivoContenidoDocente}}</ion-label>
+            </div>
+            <div class="contenedorvideo" *ngIf="item.idTipoActividad == 1">
+              <video #player playsinline preload="auto" src="http://192.168.43.209/{{item.archivoContenidoDocente}}">
+              </video>
+              <div class="bar">
+                <ion-button (click)="openFullscreen2(item)" color="light" fill="clear">
+                  <ion-icon slot="icon-only" name="easel"></ion-icon>
+                </ion-button>
+                <!-- <ion-button size="small" (click)="audio()" color="light" fill="clear">
+                  <ion-icon slot="icon-only" [name] ="contador ? 'volume-high-outline' : 'volume-mute-outline'"></ion-icon>
+                </ion-button> -->
+              </div>
+            </div>
+            <ion-button mode="ios" expand="block" class="botonD" color="warning" (click)="Descargar(item)">Descargar archivo</ion-button>
+            <div class="descripcion">
+              <ion-label>{{item.descripcionContenido}}</ion-label>
+            </div>
+            <!-- <div *ngIf="item.idTipoActividad != 1">
+              <ion-button mode="ios" size="default" class="botonD1" (click)="enviar(item)">Enviar archivo</ion-button>
+            </div> -->
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+
+    <div class="Parcial">
+      <ion-label>Segundo Parcial</ion-label>
+    </div>
+
+    <div  *ngFor="let item of listaMaterial">
+      <div *ngIf="item.idQuimestre == 2 && item.idParcial == 2">
+      
+       
+        <ion-card mode="ios">
+          <div *ngIf="item.idTipoActividad == 1"><ion-card-title>Clase</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 2"><ion-card-title>Tarea</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 3"><ion-card-title>Taller</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 4"><ion-card-title>Proyecto</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 5"><ion-card-title>Leccion</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 6"><ion-card-title>Examen</ion-card-title></div>
+  
+          <ion-card-content>
+            <div class="descripcion">
+              <ion-label>{{item.tituloContenido}}</ion-label>
+            </div>
+            <br>
+            <div *ngIf="item.idTipoActividad != 1">
+              <ion-label>{{item.archivoContenidoDocente}}</ion-label>
+            </div>
+            <div class="contenedorvideo" *ngIf="item.idTipoActividad == 1">
+              <video #player playsinline preload="auto" src="http://192.168.43.209/{{item.archivoContenidoDocente}}">
+              </video>
+              <div class="bar">
+                <ion-button (click)="openFullscreen2(item)" color="light" fill="clear">
+                  <ion-icon slot="icon-only" name="easel"></ion-icon>
+                </ion-button>
+                <!-- <ion-button size="small" (click)="audio()" color="light" fill="clear">
+                  <ion-icon slot="icon-only" [name] ="contador ? 'volume-high-outline' : 'volume-mute-outline'"></ion-icon>
+                </ion-button> -->
+              </div>
+            </div>
+            <ion-button mode="ios" expand="block" class="botonD" color="warning" (click)="Descargar(item)">Descargar archivo</ion-button>
+            <div class="descripcion">
+              <ion-label>{{item.descripcionContenido}}</ion-label>
+            </div>
+            <!-- <div *ngIf="item.idTipoActividad != 1">
+              <ion-button mode="ios" size="default" class="botonD1" (click)="enviar(item)">Enviar archivo</ion-button>
+            </div> -->
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+
+    <div class="Parcial">
+      <ion-label>Tercer Parcial</ion-label>
+    </div>
+
+    <div  *ngFor="let item of listaMaterial">
+      <div *ngIf="item.idQuimestre == 2 && item.idParcial ==3">
+      
+        
+        <ion-card mode="ios">
+          <div *ngIf="item.idTipoActividad == 1"><ion-card-title>Clase</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 2"><ion-card-title>Tarea</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 3"><ion-card-title>Taller</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 4"><ion-card-title>Proyecto</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 5"><ion-card-title>Leccion</ion-card-title></div>
+          <div *ngIf="item.idTipoActividad == 6"><ion-card-title>Examen</ion-card-title></div>
+  
+          <ion-card-content>
+            <div class="descripcion">
+              <ion-label>{{item.tituloContenido}}</ion-label>
+            </div>
+            <br>
+            <div *ngIf="item.idTipoActividad != 1">
+              <ion-label>{{item.archivoContenidoDocente}}</ion-label>
+            </div>
+            <div class="contenedorvideo" *ngIf="item.idTipoActividad == 1">
+              <video #player playsinline preload="auto" src="http://192.168.43.209/{{item.archivoContenidoDocente}}">
+              </video>
+              <div class="bar">
+                <ion-button (click)="openFullscreen2(item)" color="light" fill="clear">
+                  <ion-icon slot="icon-only" name="easel"></ion-icon>
+                </ion-button>
+                <!-- <ion-button size="small" (click)="audio()" color="light" fill="clear">
+                  <ion-icon slot="icon-only" [name] ="contador ? 'volume-high-outline' : 'volume-mute-outline'"></ion-icon>
+                </ion-button> -->
+              </div>
+            </div>
+            <ion-button mode="ios" expand="block" class="botonD" color="warning" (click)="Descargar(item)">Descargar archivo</ion-button>
+            <div class="descripcion">
+              <ion-label>{{item.descripcionContenido}}</ion-label>
+            </div>
+            <!-- <div *ngIf="item.idTipoActividad != 1">
+              <ion-button mode="ios" size="default" class="botonD1" (click)="enviar(item)">Enviar archivo</ion-button>
+            </div> -->
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+    
+
+  <!-- <div class="sticky-video" #stickyplayer [hidden]="!stickyVideo">
+    <div class="sticky-controls" *ngIf="stickyVideo">
+      <ion-row class="ion-no-padding">
+        <ion-col size="3">
+          <ion-button size="small" (click)="closeSticky()" color="light" fill="clear">
+            <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button size="small" (click)="playOrPauseSticky()" color="light" fill="clear">
+            <ion-icon slot="icon-only" [name] ="stickyPlaying ? 'pause' : 'play'"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button size="small" (click)="audio()" color="light" fill="clear">
+            <ion-icon slot="icon-only" [name] ="contador ? 'volume-high-outline' : 'volume-mute-outline'"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button size="small" (click)="openFullscreen(stickyVideo)" color="light" fill="clear">
+            <ion-icon slot="icon-only" name="easel"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div> -->
+
+</ion-content>
+

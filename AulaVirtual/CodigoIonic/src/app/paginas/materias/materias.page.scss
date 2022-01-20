@@ -1,0 +1,92 @@
+.colorbarra{
+    --ion-background-color: rgb(20,28,51);
+    background-color: rgb(20,28,51);
+    --ion-text-color: #ffffff; 
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.fondo{
+    --ion-background-color:#cad0f0;
+} 
+
+ion-card{
+    /* background: #0B3C5D; */
+    background: #00539a/*  rgb(124,160,12) */;
+    border-radius: 20px;
+}
+
+
+ion-card-title{
+    height: 45px;
+    width: auto;
+    /* background: #0B3C5D; */
+    background: #00539a;
+    color: rgba(255, 255, 255, 0.932);
+    text-align: center;
+    padding-top: 6px;
+}
+
+ion-card-content{
+    /* background: #5999f1; */
+    background: #fff;
+    width: 97%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.6%;
+    border-radius: 20px;
+}
+
+.imgbloque {
+    margin: 10px;
+    width: 95%;
+    height: 170px;
+    line-height: 115px;
+    text-align: center;
+    /* background: yellow; */
+}
+
+.imgmateria {
+    max-width:100%;
+    max-height:100%;
+    vertical-align: middle;
+}
+
+.descripcion{
+    color: #000;
+    text-align: justify;
+}
+
+.anioLectivo{
+    width: auto;
+    display: block;
+    /* background-color: #7ca00c; */
+    text-align: right;
+    ion-label{
+        background-color: #cad0f0;
+        color: #000;
+        padding: 6px;
+        border-radius: 20px;
+    }
+}
+
+.imgdocente {
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 119px;
+    border: 3px;
+    border-radius: 50%;
+    border-style: solid;;
+    border-color: #000;
+    top: 10px;
+    right: 10px;
+}
+
+.boton{
+    --background: rgb(124,160,12);
+    margin-left: auto;
+    margin-right: auto;
+    --border-radius: 20px;
+}

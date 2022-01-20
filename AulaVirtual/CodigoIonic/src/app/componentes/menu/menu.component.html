@@ -1,0 +1,25 @@
+<ion-menu side="start" menuId="primerMenu" contentId="principal">
+  <ion-header>
+    <ion-toolbar class="colorbarra">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="fondo">
+   <ion-list>
+      <ion-menu-toggle *ngFor="let c of componentesMenu | async">
+        <div *ngIf="c.perfil==1">
+          <ion-item [routerLink]="c.pagina">
+            <ion-icon slot="start" [name]="c.icon" color="primary"></ion-icon>
+            <ion-label>{{c.nombre}}</ion-label>
+          </ion-item>
+        </div> 
+      </ion-menu-toggle>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+
+ 

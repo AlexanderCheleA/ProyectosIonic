@@ -1,0 +1,175 @@
+.fondo{
+    --ion-background-color:#cad0f0;
+} 
+
+.colorbarra{
+    --ion-background-color: rgb(20,28,51);
+    --ion-text-color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.botonretroceso{
+    display: inline-block;
+    --background: rgb(93, 110, 160);
+    --border-radius: 20px;
+}
+
+ion-title{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+ion-card{
+    /* background: #0B3C5D; */
+    background: #00539a/*  rgb(124,160,12) */;
+    border-radius: 20px;
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+
+ion-card-title{
+    height: 45px;
+    width: auto;
+    /* background: #0B3C5D; */
+    background: #00539a;
+    color: rgba(255, 255, 255, 0.932);
+    text-align: center;
+    padding-top: 6px;
+}
+
+ion-card-content{
+    /* background: #5999f1; */
+    background: #fff;
+    width: 97%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.6%;
+    border-radius: 20px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.descripcion{
+    color: #000;
+    text-align: justify;
+    height: auto;
+}
+
+.Quimestre{
+    width: auto;
+    height: 43px;
+    background: rgb(124,160,12);
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 3px;
+    ion-label{
+        margin-top: 45%;
+    }
+}
+
+.Parcial{
+    width: 300px;
+    height: 38px;
+    background: rgb(78, 191, 191);
+    display: inline-block;
+    border-bottom-right-radius: 20px;
+    margin-right: auto;
+    margin-top: 3px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* .contenedorvideo{
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    
+}
+
+video{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    background-color: #000;
+    vertical-align: middle;
+} */
+
+.contenedorvideo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+video{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    vertical-align: middle;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .7);
+}
+
+  .bar {
+      
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    transform: translate(0%, -100%);
+    position: absolute;
+  }
+  
+  .sticky-video {
+    position: sticky;
+    bottom: 40px;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+  
+    video {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .7);
+    }
+  }
+  
+  
+
+  .sticky-controls {
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    widows: 100%;
+    width: 250px;
+  }
+
+
+ .botonD{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    --color: #fff;
+    --border-radius: 20px;
+}
+
+.botonD1{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    --color: #fff;
+    --border-radius: 20px;
+    --background: rgb(124,160,12);
+}

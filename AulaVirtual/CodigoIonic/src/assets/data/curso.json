@@ -1,0 +1,102 @@
+[
+    {
+        "categoria": "Desarrollo Web",
+        "curso": [
+            {
+                "id": 1,
+                "nombrecurso": "HTML Basico",
+                "horas": 15,
+                "precio": 13,
+                "foto": "/assets/curso/html.png"
+            },{
+                "id": 12,
+                "nombrecurso": "CSS Intermedio",
+                "horas": 20,
+                "precio": 18,
+                "foto": "/assets/curso/css.jpg"
+            },{
+                "id": 12,
+                "nombrecurso": "CSS Intermedio",
+                "horas": 20,
+                "precio": 18,
+                "foto": "/assets/curso/css.jpg"
+            },{
+                "id": 12,
+                "nombrecurso": "CSS Intermedio",
+                "horas": 20,
+                "precio": 18,
+                "foto": "/assets/curso/css.jpg"
+            }
+        ]
+    },{
+        "categoria": "Modelado 3d",
+        "curso": [
+            {
+                "id": 1,
+                "nombrecurso": "Diseño personaje low Poly",
+                "horas": 19,
+                "precio": 15,
+                "foto": "/assets/curso/lowpoly.jpg"
+            },{
+                "id": 2,
+                "nombrecurso": "Esenarios low poly",
+                "horas": 12,
+                "precio": 10,
+                "foto": "/assets/curso/isometrico.jpg"
+            },{
+                "id": 3,
+                "nombrecurso": "Diseño auto 3d",
+                "horas": 20,
+                "precio": 18,
+                "foto": "/assets/curso/auto.jpg"
+            },{
+                "id": 1,
+                "nombrecurso": "Diseño personaje low Poly",
+                "horas": 19,
+                "precio": 15,
+                "foto": "/assets/curso/lowpoly.jpg"
+            },{
+                "id": 2,
+                "nombrecurso": "Esenarios low poly",
+                "horas": 12,
+                "precio": 10,
+                "foto": "/assets/curso/isometrico.jpg"
+            },{
+                "id": 3,
+                "nombrecurso": "Diseño auto 3d",
+                "horas": 20,
+                "precio": 18,
+                "foto": "/assets/curso/auto.jpg"
+            }
+        ]
+    },{
+        "categoria": "Hacking ético",
+        "curso": [
+            {
+                "id": 1,
+                "nombrecurso": "Ingenieria social",
+                "horas": 10,
+                "precio": 11,
+                "foto": "/assets/curso/ingenieriasocial.jpg"
+            },{
+                "id": 12,
+                "nombrecurso": "Seguridad Informatica",
+                "horas": 20,
+                "precio": 18,
+                "foto": "/assets/curso/seguridadinformatica.jpg"
+            },{
+                "id": 1,
+                "nombrecurso": "Ingenieria social",
+                "horas": 10,
+                "precio": 11,
+                "foto": "/assets/curso/ingenieriasocial.jpg"
+            },{
+                "id": 12,
+                "nombrecurso": "Seguridad Informatica",
+                "horas": 20,
+                "precio": 18,
+                "foto": "/assets/curso/seguridadinformatica.jpg"
+            }
+        ]
+    }
+]

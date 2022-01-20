@@ -1,0 +1,14 @@
+[
+    {
+        "icon": "card",
+        "nombre": "Botones",
+        "pagina": "/admin",
+        "perfil":1
+    },
+    {
+        "icon": "card",
+        "nombre": "Card",
+        "pagina": "/estu",
+        "perfil":1
+    }
+]

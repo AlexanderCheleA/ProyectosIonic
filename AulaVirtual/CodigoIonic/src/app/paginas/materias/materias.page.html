@@ -1,0 +1,25 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="colorbarra">
+    <ion-title>Materias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+  <ion-card mode="ios" *ngFor="let item of listaMateria">
+    
+      <ion-card-title>
+        {{item.nombreMateria}}
+      </ion-card-title>
+    
+      <ion-card-content>
+        <img class="imgdocente" src="http://192.168.43.209/{{item.fotoPersona}}" alt="" (click)="verDocente(item)">
+        <div class="imgbloque">
+          <img class="imgmateria" src="http://192.168.43.209/{{item.fotoMateria}}" alt="">
+        </div>
+        <ion-button mode="ios" expand="block" (click)="IrMateria(item)" class="boton">
+          Ir al curso
+        </ion-button>
+      </ion-card-content>
+    
+  </ion-card>
+</ion-content>

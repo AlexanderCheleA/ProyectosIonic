@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="colorbarra">
+    <ion-title>Mi curso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+  <ion-card mode="ios" *ngFor="let item of listaCurso">
+    
+      <ion-card-title>
+        Curso: {{item.nombreCurso}} {{item.Paralelo}}
+      </ion-card-title>
+    
+      <ion-card-content>
+        <img class="imgdocente" src="http://192.168.43.209/{{item.fotoPersona}}" alt="" (click)="verDocente(item)">
+        <div class="imgbloque">
+          <img class="imgmateria" src="http://192.168.43.209/{{item.fotoCurso}}" alt="">
+        </div>
+        <div class="descripcion">
+          <ion-label>{{item.descripcionCurso}}</ion-label>
+        </div>
+        <div class="anioLectivo">
+          <ion-label>Año Lectivo: {{item.anioLectivo}}</ion-label>
+        </div>
+        <!-- <br>
+        <ion-button mode="ios" expand="block" routerLink="/menutabs/materias" class="boton">
+          Ir al curso
+        </ion-button>  -->      
+      </ion-card-content>
+    
+  </ion-card>
+  
+  <!-- <div *ngFor="let item of listaCategoria">
+    <ion-item class="tamañoitem">
+      <ion-label>{{item.categoria}}</ion-label>
+      <ion-icon class="icono" name="arrow-forward-outline"></ion-icon>
+    </ion-item>
+            
+      <ion-card mode="ios" *ngFor="let curso of item.curso">
+                 
+                <img [src]="curso.foto" alt="">
+            </ion-card>
+  </div> -->
+</ion-content>
+ 

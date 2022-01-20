@@ -1,0 +1,23 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="colorbarra">
+    <ion-title>Envio de actividad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+  <br>
+  <ion-item lines="none">Presione el boton de buscar para poder localizar los archivos a enviar:</ion-item>
+  <ion-button mode="ios" class="botonB"  color="warning" expand="block" (click)="buscar()">Buscar Archivos</ion-button>
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-button mode="ios" class="botonC" expand="block" (click)="cancelar()">Cancelar</ion-button>
+      </ion-col>
+      <ion-col col-6>
+        <ion-button mode="ios" class="botonD" expand="block" (click)="enviar()">Enviar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

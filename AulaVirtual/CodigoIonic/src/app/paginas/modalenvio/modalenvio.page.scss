@@ -1,0 +1,41 @@
+.fondo{
+    --ion-background-color:#cad0f0;
+} 
+
+.colorbarra{
+    --ion-background-color: rgb(20,28,51);
+    --ion-text-color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.botonretroceso{
+    display: inline-block;
+    --background: rgb(93, 110, 160);
+    --border-radius: 20px;
+}
+
+.botonD{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    --color: #fff;
+    --border-radius: 20px;
+    --background: rgb(124,160,12);
+}
+
+.botonC{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    --color: #fff;
+    --border-radius: 20px;
+}
+
+.botonB{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    --color: #fff;
+    --border-radius: 20px;
+}

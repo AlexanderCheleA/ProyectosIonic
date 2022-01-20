@@ -1,0 +1,41 @@
+.colorbarra{
+    --ion-background-color: #0B3C5D;
+    --ion-text-color: #ffffff;
+}
+
+.fondo{
+    --ion-background-color:#ffffff;
+}
+
+.contenedor{
+    display: block;
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    /* background-color: red; */
+} 
+
+.cuadros{
+    /* background-color: #ffffff;
+    display: block;
+    width: 40%;
+    height: 60%; */
+
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: #6de6b1;
+    border: solid black;
+    border-radius: 0px 0px 20px 0px;    
+}
+
+.cuadros img{
+    width: 140px;
+    height: auto;
+    margin-top: 2px;
+    margin-left: 3%;
+}

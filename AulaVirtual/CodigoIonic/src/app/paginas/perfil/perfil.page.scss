@@ -1,0 +1,88 @@
+/* .colorbarra{
+    --ion-background-color: rgb(20,28,51);
+    --ion-text-color: #ffffff;
+    --ion-border-bottom-left-radius: 15px;
+} */
+
+.fondo{
+    --ion-background-color:#cad0f0;
+} 
+
+.colorbarra{
+    --ion-background-color: rgb(20,28,51);
+    --ion-text-color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.botonretroceso{
+    display: inline-block;
+    --background: rgb(93, 110, 160);
+    --border-radius: 20px;
+}
+
+ion-title{
+    display: inline-block;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+
+.imgusuario {
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 119px;
+    border: 3px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #00539a;
+    top: 6px;
+    right: 11px;
+}
+
+.infogeneral{
+    font-size: 30px;
+    width: auto;
+    height: 86px;
+    padding: 5px;
+    color: #fff;
+    margin-top: 1px;
+    background-color: #00539a;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #00539a;
+}
+
+.general{
+    width: 93%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    margin-top: 7px;
+}
+
+.item{
+    width: auto;
+    height: auto;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    font-size: 19px;
+    padding: 5px;
+    ion-label{
+        color: #000;
+    }
+}
+
+.label2{
+    padding-left: 50px;
+    font-size: 19px;
+}
+
+.cuadro{
+    margin-top: 4px;
+    background-color: rgb(253,253,253);
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(253,253,253);
+}

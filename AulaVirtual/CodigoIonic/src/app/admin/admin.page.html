@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de docentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col><strong>Cedula</strong></ion-col>
+    <ion-col><strong>Nombre</strong></ion-col>
+    <ion-col><strong>Apellido</strong></ion-col>
+  </ion-row>
+  <ion-row lines="inset" *ngFor="let item of listadocente" class="animate__animated fadeIn animate__fast">
+    <ion-col>{{item.cli_cedula}}</ion-col>
+    <ion-col>{{item.cli_nombres}}</ion-col>
+    <ion-col>{{item.cli_apellidos}}</ion-col>
+    <ion-button mode="ios" expand="small" (click)="Enviar(item)">Ir</ion-button>
+  </ion-row>
+</ion-content>

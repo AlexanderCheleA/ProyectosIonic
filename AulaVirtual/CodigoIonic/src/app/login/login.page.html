@@ -1,0 +1,35 @@
+<ion-content class="swiper-no-swiping">
+  <br><br>
+  <img class="logo" src="assets/img/logo.png" alt="imagen del logo">
+  <br>
+  <h1 class="iniciosecion">Iniciar sesión</h1>
+  <ion-card mode="ios">
+    
+    <form #formulario="ngForm"><!--  ngForm  propiedades sies valido o no-->
+      <ion-label class="nomblabel">Usuario</ion-label>
+      <ion-item lines="none">
+        <ion-input type="text"
+                  name="usuario"
+                  [(ngModel)]="credencial.usuario"
+                  placeholder="usuario" 
+                  required>
+        </ion-input> 
+        <!-- [(ngModel)] devuelve lo que as escrito en este input 
+        pattern para validar el correo si es valido o no --> 
+      </ion-item>
+      <ion-label class="nomblabel">Contraseña</ion-label>
+      <ion-item lines="none">
+        <ion-input type="password" 
+                  name="contrasenia"
+                  [(ngModel)]="credencial.contrasenia" 
+                  placeholder="contraseña" 
+                  required>
+        </ion-input>
+      </ion-item>
+      <ion-button mode="ios" expand="block" type="submit" [disabled]="formulario.invalid" (click)="Logear()">Entrar Estudiante</ion-button>
+    </form>
+    <!-- <ion-label class="recupcontra">Entrar como administrador</ion-label>
+    <ion-button mode="ios" expand="block"  type="submit" color="warning" [disabled]="formulario.invalid" (click)="LogearAdmin()">Entrar Administrador</ion-button>
+     --><!-- <ion-label class="recupcontra">¿Has olvidado la contraseña?</ion-label> -->        
+  </ion-card>
+</ion-content>  

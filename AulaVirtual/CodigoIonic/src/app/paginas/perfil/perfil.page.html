@@ -1,0 +1,63 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="colorbarra"> 
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="fondo">
+  <ion-list *ngFor="let item of listaDocente">
+      <img class="imgusuario" src="http://192.168.43.209/{{item.fotoPersona}}">
+      <div class="general">
+        <div class="infogeneral">
+          <div>
+            <ion-label>
+              <strong>Informacion</strong>
+            </ion-label>
+          </div>
+          <div>
+            <ion-label>
+              <strong>personal:</strong>
+            </ion-label>
+          </div>
+        </div>
+        <br>
+      <div class="cuadro">
+        <div class="item">
+          <ion-label><strong>Cedula:</strong></ion-label>
+          <ion-label class="label2">{{item.cedulaPersona}}</ion-label>
+        </div>
+        <div class="item">
+          <ion-label><strong>Nombres:</strong></ion-label>
+          <ion-label class="label2">{{item.primerNombrePersona}} {{item.segundoNombrePersona}}</ion-label>
+        </div>
+        <div class="item">
+          <ion-label><strong>Apeliidos:</strong></ion-label>
+          <ion-label class="label2">{{item.primerApellidoPersona}} {{item.segundoApellidoPersona}}</ion-label>
+        </div>
+        <div class="item">
+          <ion-label><strong>Edad:</strong></ion-label>
+          <ion-label class="label2">{{edad}} Años</ion-label>
+        </div>
+        <div class="item">
+          <ion-label><strong>Fecha de nacimiento:</strong></ion-label>
+          <ion-label class="label2">{{anio}}-{{mes}}-{{dia}} (Año-Mes-Dia)</ion-label>
+        </div>  
+        <div class="item">
+          <ion-label><strong>Sexo:</strong></ion-label>
+          <ion-label class="label2">{{item.detalleSexo}}</ion-label>
+        </div>
+        <div class="item">
+          <ion-label><strong>Telefono:</strong></ion-label>
+          <ion-label class="label2">{{item.telefonoPersona}}</ion-label>
+        </div>
+        <div class="item">
+          <ion-label><strong>Correo electronico:</strong></ion-label>
+          <ion-label class="label2">{{item.correoPersona}}</ion-label>
+        </div>
+      </div>
+      </div>  
+  </ion-list>
+</ion-content>
+ 
+ 
